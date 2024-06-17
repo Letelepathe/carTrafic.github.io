@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{905CC03C-CA4F-48E4-95B7-9E3E2CF05526}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Car_Trafic_1._0</RootNamespace>
+    <AssemblyName>Car_Trafic_1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Downloads\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoiteDial\BDPret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoiteDial\BDPret.Designer.cs">
+      <DependentUpon>BDPret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoiteDial\BD_Pause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoiteDial\BD_Pause.Designer.cs">
+      <DependentUpon>BD_Pause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoiteDial\GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoiteDial\GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ChoixCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChoixCars.Designer.cs">
+      <DependentUpon>ChoixCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MenuPrincipale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MenuPrincipale.Designer.cs">
+      <DependentUpon>MenuPrincipale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoiteDial\BDPret.resx">
+      <DependentUpon>BDPret.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoiteDial\BD_Pause.resx">
+      <DependentUpon>BD_Pause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoiteDial\GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ChoixCars.resx">
+      <DependentUpon>ChoixCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MenuPrincipale.resx">
+      <DependentUpon>MenuPrincipale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\average_25px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speed_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geo_fence_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geo_fence_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\average_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\average_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\average_25px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverGuitar.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarEnemyH21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnnemyBleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarNoir1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-quant-car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarNoir2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarEnemy1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarNoirTR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarNoirTR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarNoirTR2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
